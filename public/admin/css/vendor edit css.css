@@ -1,0 +1,100 @@
+form {
+  border: 3px solid #f1f1f1;
+}
+/*assign full width inputs*/
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  margin:0.5rem 0 ;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/*centre the display image inside the container*/
+
+.imgcontainer {
+  text-align: center;
+  margin: 0.5rem;
+  padding: 0;
+}
+/*set image properties*/
+
+img.avatar {
+  width:25%;
+  border-radius: 52%;
+}
+/*set padding to the container*/
+
+/* .container {
+  padding: 0 10rem;
+} */
+/*set the forgot password text*/
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+h1{
+  text-align: center;
+  color:rgb(12, 118, 175);
+  background-color: rgb(51, 213, 159);
+  font-weight: bolder;
+}
+.sub{
+  color: rgb(232, 234, 239);
+  background-color: rgb(22, 105, 187);
+  font-weight: bolder;
+  border-radius: 2rem;
+  width: 5rem;
+}
+input {
+  border: 0;
+}
+
+.gallery{
+  margin:10px 50px;
+}
+.gallery img{
+  transition: 1s;
+  padding: 15px;
+  width: 200px;
+}
+.gallery img:hover{
+  filter:grayscale(100%);
+  transform: scale(1.06);
+}
+.bigimg{
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:50rem !important;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+#pan img{
+  height: 12rem;
+  width: 18rem;
+}
+
+@media screen and (max-width:1100px) { 
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* @media and (max-width:406px) {
+  .col img{
+    overflow: hidden;
+  }
+} */
+

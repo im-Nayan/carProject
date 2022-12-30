@@ -1,0 +1,90 @@
+.enb{
+    border: 3rem;
+    border-radius: 3rem;
+    background-color: green;
+}
+.enb_btn{
+    border: 2rem;
+}
+.table-responsive{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: small;
+}
+
+.btn_rt {
+    text-align: right !important;
+    justify-content: right !important;
+    margin-top:-30px;
+    float: right;
+    background-color: rgb(97, 116, 116);
+}
+
+@media screen and (max-width:434px) {
+    .table-bordered td{
+        max-width: 70%;
+
+        font-size: small;
+    }
+    .table-responsive{
+        white-space:initial;
+        display: flex;
+        text-align: center;
+        width:min-content;
+        column-width: 3px;
+
+
+    }
+    .card-body{
+        display: flex;
+        font-size: smaller;
+        width: auto;
+        overflow: hidden;
+    }
+    .enb_btn{
+        font-size:1rem;
+        width: 1rem;
+    }
+    .table td, .table th{
+        padding: 10px 0;
+        border:0.5px solid #afa2a2;
+    }
+    .hed{
+        font-size: medium;
+    }
+
+    .gp{
+        border-spacing: 0.5rem;
+    }
+
+}
+
+@media screen and (max-width:280px){
+    .card-body{
+        font-size: xx-small;
+        width: 100%;
+    }
+
+    .table-responsive{
+        font-size: smaller;
+        padding: 0;
+        margin: 0;
+    }
+    .enb{
+        font-size: x-small;
+    }
+    .con{
+        display: flex;
+        float: right;
+    }
+    .hed{
+        font-size: small;
+    }
+
+    tr{
+        row-gap:0.3rem;
+    }
+
+
+}

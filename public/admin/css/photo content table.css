@@ -1,0 +1,87 @@
+.pimg{
+  height: 6rem;
+  width: 10rem;
+}
+
+.table-responsive{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-size: small;
+  width: auto;
+}
+
+.card-body{
+  text-align: center;
+}
+
+.frst_div{
+  width: 100%;
+}
+
+.scnd_div{
+  width:100%;
+}
+
+.table td{
+  padding: 1.5rem;
+  font-size: small;
+}
+.sub{
+  text-align: center;
+  width: 30%;
+  justify-content: center;
+}
+
+@media screen and (max-width:840px) {
+  .table-bordered td{
+      max-width: 70%;
+      height: 100%;
+      padding: auto 0;
+  }
+  .table-responsive{
+      max-width: 100%;
+      text-align: center;
+      display: flex;
+      font-size: small;
+      padding: 0;
+  }
+  .table td,.table th{
+      padding: 0;
+      font-size: small;
+  }
+  .pimg{
+    height: 4rem;
+    width: 4rem;
+  }
+  .scrl{
+    overflow: scroll;
+    height: 2rem;
+    position: relative;
+  }
+
+}
+
+@media screen and (max-width:396px) {
+  .table-bordered td{
+      max-width: 70%;
+      height: 100%;
+      padding: auto 0;
+  }
+  .table-responsive{
+      max-width: 100%;
+      text-align: center;
+      display: flex;
+      font-size: small;
+      padding: 0;
+  }
+  .table td,.table th{
+      padding: 0;
+      font-size: small;
+  }
+  .pimg{
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+}

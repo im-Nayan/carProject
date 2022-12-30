@@ -1,0 +1,21 @@
+.enb{
+    border: 3rem;
+    border-radius: 3rem;
+    background-color: green;
+    font-weight: 800;
+}
+.enb_btn{
+    border: 2rem;
+}
+.table-responsive{
+    text-align: center;
+    display: flex;
+    font-size: small;
+}
+
+.btn_rt {
+    text-align: right !important;
+    justify-content: right !important;
+    margin-top:-30px;
+    float: right;
+}

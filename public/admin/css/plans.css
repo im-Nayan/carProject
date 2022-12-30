@@ -1,0 +1,41 @@
+.up{
+    text-align: center;
+    padding: 2rem;
+}
+.ph{
+    text-align: center;
+}
+.table-responsive{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.ed-pen{
+    visibility: hidden;
+}
+
+@media screen and (max-width:417px) {
+    .table-bordered td{
+        max-width: 70%;
+        height: 100%;
+    }
+    .table-responsive{
+        max-width: 100%;
+        text-align: center;
+        display: flex;
+        font-size: small;
+    }
+    .btn-info{
+        visibility: hidden;
+        font-size: small;
+    }
+    .ed-pen{
+        visibility: visible;
+    }
+    .ph{
+        font-size: small;
+        align-items: center;
+        width: 50%;
+    }
+    
+}

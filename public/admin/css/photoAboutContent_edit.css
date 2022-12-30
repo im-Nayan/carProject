@@ -1,0 +1,532 @@
+.form_div {
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+}
+
+.hp {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.lev_div {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    flex-direction: row;
+    /* padding-left: 5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; */
+    /* margin-left: 10rem; */
+    white-space: normal;
+    background-color: whitesmoke;
+    border: 5px black !important;
+    margin: 0 auto;
+    margin-top: 4rem;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
+    width: 100%;
+
+}
+
+.top_div {
+    flex-direction: row;
+    max-width: 80%;
+    height: 25rem;
+
+    white-space: normal;
+    background-color: whitesmoke;
+    border: 5px black !important;
+    margin: 0 auto;
+    margin-top: 4rem;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
+    width: 100%;
+}
+
+.form_lebel {
+    text-decoration: solid;
+    text-size-adjust: 20px;
+    text-align: center;
+}
+
+/* .column1{
+    display: flex;
+    justify-content: center;
+}
+.column2{
+    display: flex;
+    justify-content:center;
+} */
+
+
+.pimg {
+    height: auto;
+    flex-direction: column;
+    width: 25rem !important;
+    height: 15rem !important;
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.pimg-1{
+    height: auto;
+    flex-direction: column;
+    width: 22rem !important;
+    height: 15rem !important;
+    display: flex;
+    }
+
+.secondCol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.heading_div1 {
+    text-decoration: none;
+    position: relative;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.ph_div {
+    text-align: center;
+}
+
+.form_lebel {
+    font-weight: 700;
+}
+
+.form_control {
+
+    box-sizing: border-box;
+}
+
+
+.form_div {
+    /* border:inset #4e73df; */
+    padding: 0;
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    text-align-last: center;
+
+}
+
+.abt {
+    text-align: center;
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    /* white-space: normal; */
+    width: 40rem;
+    height: auto;
+    /* background-color:whitesmoke; */
+    border: 5px black !important;
+    margin: 0 auto;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15) !important;
+}
+
+.txt_div {
+    text-align: center;
+    align-content: center;
+    padding: 0;
+}
+
+.txt_admin {
+    text-align: center;
+    max-height: 5rem;
+    padding: 0;
+}
+
+.bal {
+    background-color: white;
+    width: 80%;
+    display: flex;
+    margin: auto;
+}
+
+.ermordhephotoinputthakbe {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.ermordhephotoinputthakbe input {
+    margin-top: 10px;
+}
+
+.dip {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dip h1 {
+    font-size: 3rem;
+}
+
+.column1 {
+    margin-left: 10rem;
+    /* display: flex; */
+    /* flex-direction: row; */
+    float: left;
+    width: 50% !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table !important;
+    clear: both;
+}
+
+.column2 {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 10rem;
+    margin-bottom: 0.5rem;
+    height: 5rem;
+}
+
+.btn1 {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+
+.abt {
+    width: 50rem;
+}
+
+.ttl {
+    background-color: lightgoldenrodyellow;
+}
+
+.top_div_part{
+    flex-direction: row;
+    /* max-width: 90%; */
+    height: 25rem;
+    white-space: normal;
+    background-color: whitesmoke;
+    border: 5px black !important;
+    margin: 0 auto;
+    margin-top: 4rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(58 59 69 / 15%) !important;
+    width: 100%;
+}
+
+
+/* small screen */
+
+@media screen and (max-width:454px) {
+    .column1 {
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+    }
+
+    .column2::after {
+        content: "\a";
+        white-space: pre;
+        page-break-after: always;
+        display: flex;
+        flex-direction: column;
+        line-break: auto;
+    }
+
+    .lev_div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lev_div div .form_lebel {
+        justify-content: flex-start;
+    }
+
+}
+
+.pimg {
+    height: auto;
+    flex-direction: column;
+    width: 150px;
+    float: left;
+}
+
+.lev_div {
+    text-align: center;
+    justify-content: center;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+}
+
+.frm_div1 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width:280px) {}
+
+
+
+@media screen and (max-width:354px) {
+    .column2 {
+        margin-left: 6rem;
+        padding: 0;
+        font-size: x-small;
+    }
+
+    .column1 {
+        margin-left: 0.1rem;
+        padding: 0;
+    }
+
+    .pimg {
+        height: auto;
+        float: right;
+        flex-direction: column;
+        width: 70px;
+    }
+}
+
+
+@media screen and (max-width:550px) {
+    .form_div {
+        width: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .txt_div {
+        width: 30%;
+        text-align: center;
+        justify-content: center;
+        display: inline;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .ph_div {
+        text-align: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0.2rem;
+
+    }
+
+    .abt {
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        height: auto;
+    }
+
+
+}
+
+.txt_div {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: inherit;
+    display: inline-table;
+    display: flex;
+    flex-direction: column;
+}
+
+.cke_reset {
+    width: inherit;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0;
+    font-size: small;
+}
+
+.lev_div {
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    font-size: small;
+}
+
+.form_control {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.form_lebel {
+    width: flex;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.ab_cls {
+    padding: 0%;
+    margin: 0;
+    text-align: center;
+}
+
+.txt_sec {
+    visibility: visible !important;
+}
+
+.txt_admin {
+    visibility: hidden;
+}
+
+.btn1 {
+    text-align: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.column2 {
+    margin-left: 14rem;
+}
+
+.column1 {
+    margin-left: 0.4rem;
+    padding-left: 0;
+}
+
+@media screen and (max-width:1270px) {
+    .pimg{
+        width:20rem !important;
+        height: 15rem !important;
+    }
+}
+
+@media screen and (max-width:1030px) {
+    .pimg{
+        width:17rem !important;
+        height: 13rem !important;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .pimg{
+        width:14rem !important;
+        height: 12rem !important;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .form_control{
+        width: 15rem;
+    }
+
+    .pimg{
+        width:14rem !important;
+        height: 12rem !important;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .pimg{
+        width:12rem !important;
+        height: 12rem !important;
+    }
+
+    .form_control{
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width:630px) {
+    .pimg{
+        width:10rem !important;
+        height: 9rem !important;
+    }
+    .form_control{
+        width: 10rem;
+    }
+}
+
+@media screen and (max-width:535px) {
+    .pimg{
+        width:8rem !important;
+        height: 7rem !important;
+    }
+    .form_control{
+        width: 8rem;
+    }
+}
+
+@media screen and (max-width:452px) {
+   .secondCol h1{
+        font-size: 2rem !important;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .secondCol h1{
+        font-size: 1.5rem !important;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .secondCol h1{
+        font-size: 1.2rem !important;
+    }
+   
+    .form_control{
+        width: 7rem;
+    }
+   
+}
+
+@media screen and (max-width:315x) {
+    .secondCol h1{
+        font-size: 1rem !important;
+}
+.pimg{
+    width:5rem !important;
+    height: 6rem !important;
+}
+}
