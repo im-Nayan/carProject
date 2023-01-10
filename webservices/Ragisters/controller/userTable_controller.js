@@ -40,7 +40,7 @@ exports.todaysWork=(req,res)=>{
                 // console.log(loginHolderName) ;
                 // console.log(AdminSignInData);
                 userModel.find().then(registerUsers=>{
-                    // console.log('registerUsers',registerUsers);
+                    console.log('registerUsers',registerUsers);
                     res.render('todaysWork', {
                         registerUsers,
                          loginHolderName,

@@ -114,7 +114,12 @@
 
                                         <% var today = new Date();%>
                                        <% var priorDate = new Date(new Date().setDate(today.getDate() + 1));%>
-                                        <% const saveTime = priorDate.getFullYear() + "-" + (priorDate.getMonth() + 1) + "-" + priorDate.getDate() %> 
+
+                                        <% var dd = String(priorDate.getDate()).padStart(2, '0'); %> 
+                                       <% var mm = String(priorDate.getMonth() + 1).padStart(2, '0'); //January is 0! %>  
+                                       <% var yyyy = priorDate.getFullYear(); %>  
+
+                                       <% saveTime =yyyy +'-'+ mm + '-' + dd ; %>  
 
                                        
                                        <% for(let i=registerUsers.length-1;i>=0;i--){ %>

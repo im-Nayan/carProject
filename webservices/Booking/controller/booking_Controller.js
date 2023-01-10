@@ -5,6 +5,7 @@ require("dotenv").config();
 let EMAIL_API_NAME = process.env.EMAIL_API_NAME;
 let EMAIL_API_KEY = process.env.EMAIL_API;
 let VERYFIED_EMAIL = process.env.VERYFIED_MAIL;
+// console.log('VERYFIED_EMAIL',VERYFIED_EMAIL);
 
 var defaultClient = SibApiV3Sdk.ApiClient.instance
 // # Instantiate the client\

@@ -20,20 +20,21 @@ const sender = {
 }
 
 
-exports.appoint_post = (req,res)=>{
-    console.log('BODY :',req.body);
-    const {name,phone,slotDate,slotTime}= req.body;
+exports.appoint_post = (req, res) => {
+    // console.log('BODY :',req.body);
+    const { name, phone, slotDate, slotTime } = req.body;
     appointModel.find({ slotDate: slotDate }).then(slotDataResult => {
-        // console.log('slotDataResult', slotDataResult);
+        console.log('slotDataResult', slotDataResult);
         // console.log('slotDataResult.length',slotDataResult.length);
-        if (slotDataResult.length!==0) {
-            appointModel.findOne({ slotTime: slotTime }).then(slotTimeResult => {
+        if (slotDataResult.length !== 0) {
+            appointModel.find({ slotTime: slotTime }).then(slotTimeResult => {
+                console.log('slotTimeResult', slotTimeResult);
                 var checkedDateData = [];
 
 
                 for (let checked of slotTimeResult) {
-                    // console.log('all Checked',checked);
-                    if (checked.slotDate == slotDate) {
+                    console.log('all Checked', checked);
+                    if (checked.slotDate === slotDate) {
                         checkedDateData.push(checked);
                     }
                 }
@@ -44,38 +45,38 @@ exports.appoint_post = (req,res)=>{
                     if (checkedDateData[0].slotDate == slotDate) {
                         // console.log('Slot Time Is Already Full', slotTimeResult);
                         // console.log('slotTimeResult.slotDate', checkedDateData[0].slotDate, '==', slotDate);
-                    return res.status(400).json({ 
-                        status:'Failed',
-                        message: 'Slot Time Is Already Full',
-                      });
+                        return res.status(400).json({
+                            status: 'Failed',
+                            message: 'Slot Time Is Already Full',
+                        });
                     }
-                }else{
+                } else {
                     new appointModel({
-                        name:req.body.name,
-                        phone:req.body.phone,
-                        slotDate:req.body.slotDate,
-                        slotTime:req.body.slotTime,
-                    }).save().then(appointData =>{
+                        name: req.body.name,
+                        phone: req.body.phone,
+                        slotDate: req.body.slotDate,
+                        slotTime: req.body.slotTime,
+                    }).save().then(appointData => {
                         // console.log(appointData);
 
 
                         // EMAIL PART
-                adminModel.find().then(adminData => {
-                    console.log(adminData);
-                    for (let x of adminData) {
-                        console.log(x.Email);
-                        const receivers = [
-                            {
+                        adminModel.find().then(adminData => {
+                            console.log(adminData);
+                            for (let x of adminData) {
+                                console.log(x.Email);
+                                const receivers = [
+                                    {
 
-                                email: x.Email,
+                                        email: x.Email,
 
-                            }
-                        ]
-                        tranEmailApi.sendTransacEmail({
-                            sender,
-                            to: receivers,
-                            subject: 'From Car Garage',
-                            htmlContent: `
+                                    }
+                                ]
+                                tranEmailApi.sendTransacEmail({
+                                    sender,
+                                    to: receivers,
+                                    subject: 'From Car Garage',
+                                    htmlContent: `
                                             <h2>Mr/Mrs,{{params.role}}</h2>
                                                <h3>{{params.user}},Booked a Slot</h3>
                                                <h3>User Deatels :</h3>
@@ -84,44 +85,44 @@ exports.appoint_post = (req,res)=>{
                                                <h4>Slot Date :{{params.slotDate}}</h4>
                                                <h4>Slot Time :{{params.slotTime}}</h4>
                                             `,
-                            params: {
-                                role: x.Fname,
-                                user: appointData.name,
-                                phone: appointData.phone,
-                                slotDate: appointData.slotDate,
-                                slotTime: appointData.slotTime
+                                    params: {
+                                        role: x.Fname,
+                                        user: appointData.name,
+                                        phone: appointData.phone,
+                                        slotDate: appointData.slotDate,
+                                        slotTime: appointData.slotTime
 
+                                    }
+                                })
                             }
                         })
-                    }
-                })
 
 
 
-                        return res.status(200).json({ 
-                            status:'success',
-                            result :appointData,
+                        return res.status(200).json({
+                            status: 'success',
+                            result: appointData,
                             message: 'appointData Submitted',
-                          });
-                    }).catch(err=>{
-                        console.log('appointDate Error',err);
-                        return res.status(400).json({ 
-                            status:'Failed',
+                        });
+                    }).catch(err => {
+                        console.log('appointDate Error', err);
+                        return res.status(400).json({
+                            status: 'Failed',
                             message: 'appointDate Error',
-                          });
+                        });
                     })
                 }
-            }).catch(err=>{
-                console.log('slotTimeResult ERROR',err);
+            }).catch(err => {
+                console.log('slotTimeResult ERROR', err);
             })
 
         } else {
             new appointModel({
-                name:req.body.name,
-                phone:req.body.phone,
-                slotDate:req.body.slotDate,
-                slotTime:req.body.slotTime,
-            }).save().then(appointData =>{
+                name: req.body.name,
+                phone: req.body.phone,
+                slotDate: req.body.slotDate,
+                slotTime: req.body.slotTime,
+            }).save().then(appointData => {
                 // console.log(appointData);
 
 
@@ -163,20 +164,20 @@ exports.appoint_post = (req,res)=>{
                 })
 
 
-                return res.status(200).json({ 
-                    status:'success',
-                    result :appointData,
+                return res.status(200).json({
+                    status: 'success',
+                    result: appointData,
                     message: 'appointData Submitted',
-                  });
-            }).catch(err=>{
-                console.log('appointDate Error',err);
-                return res.status(400).json({ 
-                    status:'Failed',
+                });
+            }).catch(err => {
+                console.log('appointDate Error', err);
+                return res.status(400).json({
+                    status: 'Failed',
                     message: 'appointDate Error',
-                  });
+                });
             })
         }
     })
 
-    
+
 }

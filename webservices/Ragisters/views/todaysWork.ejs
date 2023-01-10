@@ -112,17 +112,22 @@
                                             </tr>
                                         </thead>
 
-                                        <% var datetime = new Date()%>
-                                        <%var Year = datetime.getFullYear();%>
-                                        <%var Month = datetime.getMonth() + 1;%>
-                                        <%var Day = datetime.getDate();%>
-                                       <% var saveTime = Year + "-" + Month + "-" + Day %>
+                                       
+
+                                       <% var today = new Date(); %> 
+                                        <% var dd = String(today.getDate()).padStart(2, '0'); %> 
+                                       <% var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0! %>  
+                                       <% var yyyy = today.getFullYear(); %>  
+
+                                       <% saveTime =yyyy +'-'+ mm + '-' + dd ; %>  
                                        <% console.log(saveTime) %>  
 
                                        
                                        <% for(let i=registerUsers.length-1;i>=0;i--){ %>
                                        
-                                       <% if (registerUsers[i].slotDate==saveTime) { %>
+                                        <% if (registerUsers[i].slotDate==saveTime) { %>
+                                            <% console.log('registerUsers[i]',registerUsers[i].slotDate) %>  
+
                                         <tbody>
                                             <tr>
                                                 <td><%= registerUsers[i].name %> </td>
